@@ -11,10 +11,14 @@ public class Lotto {
 			int[] nums= new int[6];
 			
 			for(int i=1;i<nums.length;i++) {
-				for(int j=1;j<nums.length;j--) {
 					nums[i] = r.nextInt(6)+1;
-				}
-		}
+					for(int j=0;j<i;j++) {
+						if(nums[i]==nums[j]) {
+							i--;
+							break;
+						}
+					}
+			}
 			for(int i=1;i<nums.length;i++) {
 				System.out.println(nums[i]);
 		}
