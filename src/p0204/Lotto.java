@@ -11,7 +11,7 @@ public class Lotto {
 			int[] nums= new int[6];
 			
 			for(int i=1;i<nums.length;i++) {
-					nums[i] = r.nextInt(6)+1;
+					nums[i] = r.nextInt(45)+1;
 					for(int j=0;j<i;j++) {
 						if(nums[i]==nums[j]) {
 							i--;
