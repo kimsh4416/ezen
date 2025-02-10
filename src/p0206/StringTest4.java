@@ -32,6 +32,7 @@ public class StringTest4 {
 		System.out.println(str); // 안녕하세요
 		System.out.println(str.substring(2,3)); // 하
 		
+		
 		System.out.println(str.substring(2,2)); // "" 빈문자열
 		
 	}
