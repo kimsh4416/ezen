@@ -5,24 +5,16 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import p0217.DataBaseConnector.DateaBaseConnector;
+
 
 
 public class DB1 {
 
 	public static void main(String[] args) {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		String url = "jdbc:mysql://localhost:3306/ezen";
-		String use = "root";
-		String pwd = "r1r2r3";
 		
 		try {
-			Connection con = DriverManager.getConnection(url, use, pwd);
+			Connection con = DateaBaseConnector.getCon();
 			Statement stmt = con.createStatement();
 			
 			String sql = "UPDATE USER_INFO";

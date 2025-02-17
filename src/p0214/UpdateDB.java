@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import p0217.DataBaseConnector.DateaBaseConnector;
+
 public class UpdateDB {
 
 	public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class UpdateDB {
 		String password = "r1r2r3";
 		
 		try {
-			Connection con = DriverManager.getConnection(url, username, password);
+			Connection con = DateaBaseConnector.getCon();
 			Statement stmt = con.createStatement();
 			
 			String sql = "UPDATE FOOD_INFO";
