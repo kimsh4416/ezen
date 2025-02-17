@@ -64,6 +64,8 @@ public class UserInfoCRUD {
 		return 0;
 	}
 	
+	
+	
 	public static void main(String[] args) {
 		int result = insertUserInfo("홍길동","hong","r1r2r3");
 		System.out.println("입력한 갯수 :" + result);
